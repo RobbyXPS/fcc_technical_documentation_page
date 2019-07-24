@@ -1,0 +1,219 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<div id="main-container">
+  <nav id="navbar">
+    <header id="main-header"><h1>HTML Links</h1></header>
+    <ul id="nav-ul">
+      <li><a href="#HTML_Links_-_Hyperlinks" class="nav-link">HTML Links - Hyperlinks</a></li>
+      <li><a href="#HTML_Links_-_Syntax" class="nav-link">HTML Links - Syntax</a></li>
+      <li><a href="#Local_Links" class="nav-link">Local Links</a></li>
+      <li><a href="#HTML_Link_Colors" class="nav-link">HTML Link Colors</a></li>
+      <li><a href="#HTML_Links_-_The_target_Attribute" class="nav-link">HTML Links - The target Attribute</a></li>
+      <li><a href="#HTML_Links_-_Image_as_Link" class="nav-link">      HTML Links - Image as Link</a></li>
+      <li><a href="#Link_Titles" class="nav-link">Link Titles</a></li>
+      <li><a href="#HTML_Links_-_Create_a_Bookmark" class="nav-link">HTML Links - Create a Bookmark</a></li>
+      <li><a href="#External_Paths" class="nav-link">External Paths</a></li>
+      <li><a href="#Chapter_Summary" class="nav-link">Chapter Summary</a></li>
+      </ul>
+  </nav>
+  
+<main id="main-doc">
+  <section id="HTML_Links_-_Hyperlinks" class="main-section">
+    <header><h2>HTML Links - Hyperlinks</h2></header>
+<p>HTML links are hyperlinks.</p>
+<p>You can click on a link and jump to another document.</p>
+<p>When you move the mouse over a link, the mouse arrow will turn into a little hand.</p>
+    <p class="note"><strong>Note:</strong> A link does not have to be text. It can be an image or any other HTML element.</p>
+  </section>
+
+<hr>
+  
+  <section id="HTML_Links_-_Syntax" class="main-section">
+    <header><h2>HTML Links - Syntax</h2></header>
+    <p>In HTML, links are defined with the <code class="inline-code">&lt;a&gt;</code> tag:</p>
+    
+    <div class="block-code-holder">
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href</span><span class="medium-blue">="url"&gt;<span><span class="black">link text</span><span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt</span></code>
+    </div>
+     
+    <div class="block-code-holder">
+      <h3 class="code-example-title">Example</h3>
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href</span><span class="medium-blue">="https://www.w3schools.com/html/"&gt;<span><span class="black">Visit our HTML tutorial</span><span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt</span></code>
+    </div>
+    
+    <p>The <span class="inline-code">href</span> attribute specifies the destination address (<span style="color: darkblue;">https://www.w3schools.com/html/</span>) of the link.</p>
+    <p>The <strong>link text</strong> is the visible part (Visit our HTML tutorial).</p>
+    <p>Clicking on the link text will send you to the specified address.</p>
+    <p class="note"><strong>Note:</strong> Without a forward slash at the end of subfolder addresses, you might generate two requests to the server. Many servers will automatically add a forward slash to the end of the address, and then create a new request.</p>
+  </section>
+
+<hr>
+      
+  <section id="Local_Links" class="main-section">
+    <header><h2>Local Links</h2></header>
+    <p>The example above used an absolute URL (a full web address).</p>
+    <p>A local link (link to the same web site) is specified with a relative URL (without https://www....).</p>
+    
+    <div class="block-code-holder">
+      <h3 class="code-example-title">Example</h3>
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href</span><span class="medium-blue">="html_images.asp"&gt;<span><span class="black;">HTML Images</span><span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt</span>
+</code>
+    </div>  
+  </section>
+      
+<hr>
+      
+   <section id="HTML_Link_Colors" class="main-section">
+     <header><h2>HTML Link Colors</h2></header>
+     <p>By default, a link will appear like this (in all browsers):</p>
+     <ul>
+       <li class="main-li">An unvisited link is underlined and blue</li>
+       <li class="main-li">A visited link is underlined and purple</li>
+       <li class="main-li">An active link is underlined and red</li>
+     </ul>
+     <p>You can change the default colors, by using CSS:</p>
+     <div class="block-code-holder">
+       <h3 class="code-example-title">Example</h3>
+       <pre class="block-code">
+<span class="brown">&lt;/style&gt;</span>
+  <span class="brown">a:link</span> <span class="black">{</span>
+  <span class="crimson">color<span><span class="black"><span class="black">:</span> <span class="medium-blue">green</span><span class="black">;</span> 
+  <span class="crimson">background-color</span><span class="black">:</span> <span class="medium-blue">transparent</span>; 
+  <span class="crimson">text-decoration</span><span class="black">:</span> <span class="medium-blue">none</span><span class="black">;</span>
+<span class="black">}</span>
+
+<span class="brown">a:visited</span> <span class="black">{</span>
+  <span class="crimson">color</span><span class="black">:</span> <span class="medium-blue">pink</span><span class="black">;</span>
+  <span class="crimson">background-color</span><span class="black">:</span> <span class="medium-blue">transparent</span><span class="black">;
+</span>  <span class="crimson">text-decoration</span><span class="black">:</span> <span class="medium-blue">none</span><span class="black">;</span>
+<span class="black">}</span>
+
+<span class="brown">a:hover</span> <span class="black">{</span>
+  <span class="crimson">color</span><span class="black">:</span> <span class="medium-blue">red</span><span class="black">;</span>
+  <span class="crimson">background-color</span><span class="black">:</span> <span class="medium-blue">transparent</span><span class="black">;</span>
+  <span class="crimson">text-decoration</span><span class="medium-blue">:</span> <span class="medium-blue">underline</span><span class="black">;</span>
+}
+
+<span class="brown">a:active</span> <span class="black">{</span>
+  <span class="crimson">color</span><span class="black">:</span> <span class="medium-blue">yellow</span><span class="black">;</span>
+  <span class="crimson">background-color</span><span class="black">:</span> <span class="medium-blue">transparent</span><span class="black">;</span>
+  <span class="crimson">text-decoration</span><span class="black">:</span> <span class="medium-blue">underline</span><span class="black">;</span>
+<span class="black">}</span>
+
+<span class="brown">&lt;/style&gt;</span>
+       </pre>
+     </div>
+   </section>
+
+<hr>
+
+  <section id="HTML_Links_-_The_target_Attribute" class="main-section">
+    <header><h2>HTML Links - The target Attribute</h2></header>
+    <p>The <span class="inline-code">target</span> attribute specifies where to open the linked document.</p>
+    <p>The target attribute can have one of the following values:</p>
+    <ul>
+      <li class="main-li">_blank - Opens the linked document in a new window or tab</li>
+      <li class="main-li">_self - Opens the linked document in the same window/tab as it was clicked (this is default)</li>
+      <li  class="main-li">_parent - Opens the linked document in the parent frame</li>
+      <li class="main-li">_top - Opens the linked document in the full body of the window</li>
+      <li class="main-li">framename - Opens the linked document in a named frame</li>
+    </ul>
+    <p>This example will open the linked document in a new browser window/tab:</p>
+    <div class="block-code-holder">
+      <h3 class="code-example-title">Example</h3>
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href</span><span class="medium-blue">="https://www.w3schools.com/"</span> <span class="crimson">target</span><span class="medium-blue">="_blank"&gt;</span><span class="black">Visit W3Schools!</span><span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt;</span></code>
+    </div>
+  <p><strong>Tip:</strong> If your webpage is locked in a frame, you can use <span class="inline-code">target="_top"</span> to break out of the frame:</p>
+  <div class="block-code-holder">
+      <h3 class="code-example-title">Example</h3>
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href=</class><span class="medium-blue">"https://www.w3schools.com/html/"</span><span class="crimson"> target</span><span class="medium-blue">="_top"&gt;</span><span class="black">HTML5 tutorial!</span><span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt;</span></code>
+    </div>
+  </section>
+
+<hr>
+
+  <section id="HTML_Links_-_Image_as_Link" class="main-section">
+  <header><h2>HTML Links - Image as Link</h2></header>
+  <p>It is common to use images as links:</p>
+    <div class="block-code-holder">
+      <h3 class="code-example-title">Example</h3>
+      <pre class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href</span><span class="medium-blue">="default.asp"&gt;</span>
+  <span class="medium-blue">&lt;</span><span class="brown">img</span> <span class="crimson">src</span><span class="medium-blue">="smiley.gif"</span> <span class="crimson">alt</span><span class="medium-blue">="HTML tutorial"</span> <span class="crimson">style</span><span class="medium-blue">="width:42px;height:42px;border:0;"&gt;</span>
+<span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt;</span></pre>
+    </div>
+    <div class="note"><strong>Note:</strong> <span class="inline-code">border:0;</span> is added to prevent IE9 (and earlier) from displaying a border around the image (when the image is a link).</div>
+  </section>
+  
+<hr>
+
+  <section id="Link_Titles" class="main-section">
+    <header><h2>Link Titles</h2></header>
+    <p>The <span class="inline-code">title</span> attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.</p>
+    <div class="block-code-holder">
+      <h3 class="code-example-title">Example</h3>
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href</span><span class="medium-blue">="https://www.w3schools.com/html/"</span> <span class="crimson">title</span><span class="medium-blue">="Go to W3Schools HTML section"&gt;</span><span class="black">Visit our HTML Tutorial</span><span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt;</span></code>
+    </div>
+  </section>
+
+<hr>
+
+  <section id="HTML_Links_-_Create_a_Bookmark" class="main-section">
+    <header><h2>HTML Links - Create a Bookmark</h2></header>
+    <p>HTML bookmarks are used to allow readers to jump to specific parts of a Web page.</p>
+    <p>Bookmarks can be useful if your webpage is very long.</p>
+    <p>To make a bookmark, you must first create the bookmark, and then add a link to it.</p>
+    <p>When the link is clicked, the page will scroll to the location with the bookmark.</p>
+    <h2>Example</h2>
+    <p>First, create a bookmark with the <span class="inline-code">id</span> attribute:</p>
+    <div class="block-code-holder">
+    <h3 class="code-example-title">Example</h3>
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">h2</span> <span class="crimson">id</span><span class="medium-blue">="C4"&gt;</span><span class="black">Chapter 4</span><span class="medium-blue">&lt;</span><span class="brown">/h2</span><span class="medium-blue">&gt;</span></code>
+    </div>
+      <p>Then, add a link to the bookmark ("Jump to Chapter 4"), from within the same page:</p>
+      <div class="block-code-holder">
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href</span><span class="medium-blue">="#C4"&gt;</span><span class="black">Jump to Chapter 4</span><span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt;</span></code>
+    </div>
+    <p>Or, add a link to the bookmark ("Jump to Chapter 4"), from another page:</p>
+    <div class="block-code-holder">
+      <h3 class="code-example-title">Example</h3>
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href</span><span class="medium-blue">="html_demo.html#C4"&gt;</span><span class="black">Jump to Chapter 4</span><span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt;</span></code>
+    </div>
+  </section>
+
+<hr>
+
+  <section id="External_Paths" class="main-section">
+    <header><h2>External Paths</h2></header>
+    <p>External pages can be referenced with a full URL or with a path relative to the current web page.</p>
+    <p>This example uses a full URL to link to a web page:</p>
+    <div class="block-code-holder">
+      <h3 class="code-example-title">Example</h3>
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href</span><span class="medium-blue">="https://www.w3schools.com/html/default.asp"&gt;</span><span class="black">HTML tutorial</span><span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt;</span></code>
+    </div>
+    <p>This example links to a page located in the html folder on the current web site:</p>
+    <div class="block-code-holder">
+      <h3 class="code-example-title">Example</h3>
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href</span><span class="medium-blue">="/html/default.asp"&gt;</span><span class="black">HTML tutorial</span><span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt;</span></code>
+    </div>
+    <p>This example links to a page located in the same folder as the current page:</p>
+    <div class="block-code-holder">
+      <h3 class="code-example-title">Example</h3>
+      <code class="block-code"><span class="medium-blue">&lt;</span><span class="brown">a</span> <span class="crimson">href</span><span class="medium-blue">="default.asp"&gt;</span><span class="black">HTML tutorial</span><span class="medium-blue">&lt;</span><span class="brown">/a</span><span class="medium-blue">&gt;</span></code>
+    </div>
+    <p class="note">You can read more about file paths in the chapter     <a href="https://www.w3schools.com/html/html_filepaths.asp" target="_blank">HTML File Paths</a>.</p>
+  </section>
+
+<hr>
+
+  <section id="Chapter_Summary" class="main-section">
+    <header><h2>Chapter Summary</h2></header>
+    <ul>
+      <li class="main-li">Use the <span class="inline-code">&lt;a&gt;</span>element to define a link</li>
+<li class="main-li">Use the <span class="inline-code">href</span> attribute to define the link address</li>
+<li class="main-li">Use the <span class="inline-code">target</span> attribute to define where to open the linked document
+<li class="main-li">Use the <span class="inline-code">&lt;img&gt;</span> element (inside &lt;a&gt;) to use an image as a link</li>
+<li class="main-li">Use the <span class="inline-code">id</span> attribute (id="value") to define bookmarks in a page</li>
+<li class="main-li">Use the <span class="inline-code">href</span> attribute (href="#value") to link to the bookmark
+  </section>
+</main>
+</div>
